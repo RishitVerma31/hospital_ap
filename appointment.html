@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .filters {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            gap: 10px;
+        }
+        .filters input, .filters select {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 250px;
+        }
+        .doctor-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+        .doctor-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            margin: 15px;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #4CAF50; /* Green border */
+            transition: transform 0.3s ease;
+        }
+        .doctor-card:hover {
+            transform: translateY(-5px);
+        }
+        .doctor-card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .doctor-card h3 {
+            margin-top: 10px;
+            font-size: 1.5rem;
+        }
+        .doctor-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+        .doctor-card .details {
+            margin-top: 15px;
+            text-align: left;
+        }
+        .doctor-card .details p {
+            margin: 5px 0;
+        }
+        .book-appointment {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .book-appointment:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Doctor Appointment Page</h1>
+    <p>Select a doctor to book an appointment</p>
+</header>
+
+<!-- Filter and Search Bar -->
+<div class="filters">
+    <input type="text" id="searchInput" placeholder="Search by doctor name..." onkeyup="filterDoctors()">
+    <select id="departmentFilter" onchange="filterDoctors()">
+        <option value="">Filter by Department</option>
+        <option value="Cardiologist">Cardiologist</option>
+        <option value="Neurosurgeon">Neurosurgeon</option>
+        <option value="Dermatologist">Dermatologist</option>
+        <option value="Orthopedic">Orthopedic</option>
+        <option value="Gynecologist">Gynecologist</option>
+        <option value="Dentist">Dentist</option>
+        <option value="ENT">ENT</option>
+        <option value="Pediatrician">Pediatrician</option>
+        <option value="Nephrologist">Nephrologist</option>
+        <option value="Pulmonology">Pulmonology</option>
+    </select>
+</div>
+
+<div class="doctor-list">
+    <!-- Doctor 1 -->
+    <div class="doctor-card" data-department="Cardiologist">
+        <img src="cardio naresh.jpeg" alt="Doctor Image">
+        <h3>Dr. Naresh Trehan</h3>
+        <p>Cardiologist</p>
+        <div class="details">
+            <p><strong>Experience:</strong> 35 years</p>
+            <p><strong>Fees:</strong> ₹2000 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 2 -->
+    <div class="doctor-card" data-department="Neurosurgeon">
+        <img src="neuro ajay.jpeg" alt="Doctor Image">
+        <h3>Dr. Ajay Pandit</h3>
+        <p>Neurosurgeon</p>
+        <div class="details">
+            <p><strong>Experience:</strong> 30 years</p>
+            <p><strong>Fees:</strong> ₹2000 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 3 -->
+    <div class="doctor-card" data-department="Dermatologist">
+        <img src="derma heena.webp" alt="Doctor Image">
+        <h3>Dr. Heena Tiwari</h3>
+        <p>Dermatologist</p>
+        <div class="details">
+            <p><strong>Experience:</strong> 28 years</p>
+            <p><strong>Fees:</strong> ₹1800 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 4 -->
+    <div class="doctor-card" data-department="Orthopedic">
+        <img src="ortho suresh.jpg" alt="Doctor Image">
+        <h3>Dr. Suresh Jindal</h3>
+        <p>Orthopedic</p>
+        <div class="details">
+            <p><strong>Experience:</strong> 29 years</p>
+            <p><strong>Fees:</strong> ₹1800 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 5 -->
+    <div class="doctor-card" data-department="Cardiologist">
+        <img src="cardio pushkar.jpg" alt="Doctor Image">
+        <h3>Dr. Pushkar Malhotra</h3>
+        <p>Cardiologist</p>
+        <div class="details">
+            <p><strong>Experience:</strong> 28 years</p>
+            <p><strong>Fees:</strong> ₹2000 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 6 -->
+    <div class="doctor-card" data-department="Neurosurgeon">
+        <img src="neuro Atul.jpg" alt="Doctor Image">
+        <h3>Dr. Atul Bansal</h3>
+        <p>Neurosurgeon</p>
+        <div class="details">
+            <p><strong>Experience:</strong> 32 years</p>
+            <p><strong>Fees:</strong> ₹2000 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 7 -->
+    <div class="doctor-card" data-department="Dermatologist">
+        <img src="derma tanvi.webp" alt="Doctor Image">
+        <h3>Dr. Tanvi Thakur</h3>
+        <p>Dermatologist</p>
+        <div class="details">
+            <p><strong>Experience:</strong> 28 years</p>
+            <p><strong>Fees:</strong> ₹1800 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 8 -->
+    <div class="doctor-card" data-department="Orthopedic">
+        <img src="ortho subhash.jpg" alt="Doctor Image">
+        <h3>Dr. Subhash Oberoi</h3>
+        <p>Orthopedic</p>
+        <div class="details">
+            <p><strong>Experience:</strong> 25 years</p>
+            <p><strong>Fees:</strong> ₹1800 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 9 -->
+    <div class="doctor-card" data-department="Gynecologist">
+        <img src="gyno prithika.jpg" alt="Doctor Image">
+        <h3>Dr. Prithika Sharma</h3>
+        <p>Gynecologist/p>
+        <div class="details">
+            <p><strong>Experience:</strong> 25 years</p>
+            <p><strong>Fees:</strong> ₹2000 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 10 -->
+    <div class="doctor-card" data-department="Dentist">
+        <img src="dentist neeraj.png" alt="Doctor Image">
+        <h3>Dr. Neeraj Birla</h3>
+        <p>dentist</p>
+        <div class="details">
+            <p><strong>Experience:</strong> 24 years</p>
+            <p><strong>Fees:</strong> ₹1800 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 11 -->
+    <div class="doctor-card" data-department="ENT">
+        <img src="ent ravi.png" alt="Doctor Image">
+        <h3>Dr. Ravi Shastri</h3>
+        <p>ENT</p>
+        <div class="details">
+            <p><strong>Experience:</strong> 24 years</p>
+            <p><strong>Fees:</strong> ₹1500 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 12 -->
+    <div class="doctor-card" data-department="Pediatrician">
+        <img src="pedia khushi.webp" alt="Doctor Image">
+        <h3>Dr. Khushi Walia</h3>
+        <p>Pediatrician</p>
+        <div class="details">
+            <p><strong>Experience:</strong> 18 years</p>
+            <p><strong>Fees:</strong> ₹1800 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 13 -->
+    <div class="doctor-card" data-department="Nephrologist">
+        <img src="nephro dhaval.jpg" alt="Doctor Image">
+        <h3>Dr. Dhaval Mehra</h3>
+        <p>Nephrologist</p>
+        <div class="details">
+            <p><strong>Experience:</strong> 28 years</p>
+            <p><strong>Fees:</strong> ₹2000 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 14 -->
+    <div class="doctor-card" data-department="Gynecologist">
+        <img src="gyno neha.png" alt="Doctor Image">
+        <h3>Dr. Neha</h3>
+        <p>Gynecologist</p>
+        <div class="details">
+            <p><strong>Experience:</strong> 24 years</p>
+            <p><strong>Fees:</strong> ₹2000 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 15 -->
+    <div class="doctor-card" data-department="Dentist">
+        <img src="dentist preeti.jpg" alt="Doctor Image">
+        <h3>Dr. Preeti Chadha</h3>
+        <p>Dentist</p>
+        <div class="details">
+            <p><strong>Experience:</strong> 22 years</p>
+            <p><strong>Fees:</strong> ₹1800 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 16 -->
+    <div class="doctor-card" data-department="ENT">
+        <img src="ent swati.png" alt="Doctor Image">
+        <h3>Dr. Swati Chauhan</h3>
+        <p>ENT</p>
+        <div class="details">
+            <p><strong>Experience:</strong> 22 years</p>
+            <p><strong>Fees:</strong> ₹1600 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 17 -->
+    <div class="doctor-card" data-department="Pediatrician">
+        <img src="pedia sandeep.jpg" alt="Doctor Image">
+        <h3>Dr. Sandeep Maheshwari</h3>
+        <p>Pediatrician</p>
+        <div class="details">
+            <p><strong>Experience:</strong> 28 years</p>
+            <p><strong>Fees:</strong> ₹2000 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 18 -->
+    <div class="doctor-card" data-department="Nephrologist">
+        <img src="nephro ravi.jpg" alt="Doctor Image">
+        <h3>Dr. Ravi Chandel</h3>
+        <p>Cardiologist</p>
+        <div class="details">
+            <p><strong>Experience:</strong> 28 years</p>
+            <p><strong>Fees:</strong> ₹2000 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 19 -->
+    <div class="doctor-card" data-department="Pulmonology">
+        <img src="pulmono shweta.jpg" alt="Doctor Image">
+        <h3>Dr. Shweta Mittal</h3>
+        <p>Pulmonology</p>
+        <div class="details">
+            <p><strong>Experience:</strong> 28 years</p>
+            <p><strong>Fees:</strong> ₹2000 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 20 -->
+    <div class="doctor-card" data-department="Pulmonology">
+        <img src="pulmono pankaj.webp" alt="Doctor Image">
+        <h3>Dr. Pankaj Arora</h3>
+        <p>Pulmonology</p>
+        <div class="details">
+            <p><strong>Experience:</strong> 18 years</p>
+            <p><strong>Fees:</strong> ₹1600 per consultation</p>
+        </div>
+        <button class="book-appointment">Book Appointment</button>
+    </div>
+
+</div>
+
+<script>
+    function filterDoctors() {
+        let searchInput = document.getElementById("searchInput").value.toLowerCase();
+        let departmentFilter = document.getElementById("departmentFilter").value.toLowerCase();
+        let doctorCards = document.querySelectorAll(".doctor-card");
+
+        doctorCards.forEach(card => {
+            let doctorName = card.querySelector("h3").textContent.toLowerCase();
+            let department = card.getAttribute("data-department").toLowerCase();
+
+            // Filter by search input and department filter
+            if (
+                doctorName.includes(searchInput) && 
+                (department.includes(departmentFilter) || departmentFilter === "")
+            ) {
+                card.style.display = "block";  // Show matching card
+            } else {
+                card.style.display = "none";  // Hide non-matching card
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
