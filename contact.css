@@ -1,0 +1,96 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  header {
+    background-color: #43685c;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  h3 {
+    margin-top: 20px;
+  }
+  
+  section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+  }
+  
+  .contact-info {
+    background-color: #e9f5e1;
+  }
+  
+  .contact-info p {
+    font-size: 1.1em;
+  }
+  
+  .contact-details a {
+    color: #43685c;
+    text-decoration: none;
+  }
+  
+  .appointment-request input,
+  .appointment-request textarea,
+  .appointment-request button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .appointment-request button {
+    background-color: #43685c;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+  }
+  
+  .appointment-request button:hover {
+    background-color: #45a049;
+  }
+  
+  .social-media a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .social-media a:hover {
+    color: #4CAF50;
+    text-decoration: underline;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+  
+  footer .social-media {
+    margin-top: 10px;
+  }
+  
