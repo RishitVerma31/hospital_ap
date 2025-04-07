@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Healthcare Login / Signup</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f8f7;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #43685c;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .wrapper {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      display: flex;
+      width: 900px;
+      max-width: 100%;
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-panel {
+      flex: 1;
+      background: url('https://images.unsplash.com/photo-1588776814546-ec0d05c25f33?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;
+    }
+
+    .container {
+      flex: 1;
+      padding: 40px 30px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #43685c;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #e36d60;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #d65b51;
+    }
+
+    .form {
+      display: none;
+    }
+
+    .form.active {
+      display: block;
+    }
+
+    .toggle-msg {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 15px;
+    }
+
+    .toggle-msg button {
+      background: none;
+      border: none;
+      color: #43685c;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: underline;
+      font-size: 15px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .card {
+        flex-direction: column;
+      }
+
+      .image-panel {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Healthcare Portal
+  </header>
+
+  <div class="wrapper">
+    <div class="card">
+      <div class="image-panel"></div>
+
+      <div class="container">
+        <!-- Login Form -->
+        <div id="loginForm" class="form active">
+          <h2>Login</h2>
+          <input type="text" placeholder="Username" />
+          <input type="password" placeholder="Password" />
+          <button class="btn">Login</button>
+          <div class="toggle-msg">
+            Not a user? <button onclick="showSignup()">Sign up now</button>
+          </div>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signupForm" class="form">
+          <h2>Sign Up</h2>
+          <input type="text" placeholder="Full Name" />
+          <input type="email" placeholder="Email" />
+          <input type="text" placeholder="Username" />
+          <input type="password" placeholder="Password" />
+          <button class="btn">Create Account</button>
+          <div class="toggle-msg">
+            Already have an account? <button onclick="showLogin()">Login here</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showSignup() {
+      document.getElementById('loginForm').classList.remove('active');
+      document.getElementById('signupForm').classList.add('active');
+    }
+
+    function showLogin() {
+      document.getElementById('signupForm').classList.remove('active');
+      document.getElementById('loginForm').classList.add('active');
+    }
+  </script>
+</body>
+</html>
