@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthcare Management - Packages</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f8f7;
+      color: #333;
+    }
+
+    header {
+      background-color: #43685c;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-list li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #43685c;
+      margin-bottom: 2rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      border-top: 5px solid #4CAF50;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .card h2 {
+      color: #43685c;
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #4CAF50;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      background-color: #43685c;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Healthcare Management</div>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="appointment.html">Find a Doctor</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Our Basic Health Packages</h1>
+    <div class="card-grid">
+      <div class="card" onclick="goToPackage('dental.html')">
+        <h2>Dental Care</h2>
+        <p>Comprehensive dental checkups, cleaning & x-rays.</p>
+        <p class="price">Starting at ₹999</p>
+      </div>
+      <div class="card" onclick="goToPackage('gynac.html')">
+        <h2>Gynaecologist</h2>
+        <p>Women's health screening and consultations.</p>
+        <p class="price">Starting at ₹1499</p>
+      </div>
+      <div class="card" onclick="goToPackage('cardiology.html')">
+        <h2>Cardiology</h2>
+        <p>Heart checkups, ECG & expert consultations.</p>
+        <p class="price">Starting at ₹1999</p>
+      </div>
+      <div class="card" onclick="goToPackage('diab.html')">
+        <h2>Diabetes</h2>
+        <p>Blood sugar testing & diabetic health assessments.</p>
+        <p class="price">Starting at ₹899</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Healthcare Management. All rights reserved.
+  </footer>
+
+  <script>
+    function goToPackage(url) {
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>

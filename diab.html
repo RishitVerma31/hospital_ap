@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diabetes Packages - Healthcare Management</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f8f7;
+      color: #333;
+    }
+
+    header {
+      background-color: #43685c;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-list li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #43685c;
+      margin-bottom: 2rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 2rem;
+      text-align: center;
+      border-top: 5px solid #4CAF50;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #43685c;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #4CAF50;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      background-color: #43685c;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Healthcare Management</div>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Find a Doctor</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Diabetes Care Packages</h1>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Basic Diabetes Check</h3>
+        <p>Fasting & postprandial blood sugar tests.</p>
+        <p class="price">₹899</p>
+      </div>
+      <div class="card">
+        <h3>Advanced Diabetes Panel</h3>
+        <p>Includes HbA1c, blood sugar profile & diet consult.</p>
+        <p class="price">₹1,499</p>
+      </div>
+      <div class="card">
+        <h3>Comprehensive Diabetes Plan</h3>
+        <p>HbA1c, insulin levels, foot check, eye test & expert consult.</p>
+        <p class="price">₹2,999</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Healthcare Management. All rights reserved.
+  </footer>
+</body>
+</html>
