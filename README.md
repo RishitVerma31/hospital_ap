@@ -38,7 +38,39 @@ Hospital-Appointment-Portal/
 
 ## 🧩 Code Snippets
 
+### 📄 HTML (index.html)
+html
+<section class="hero" style="background-image: url('poster2.jpg');">
+    <div class="hero-content">
+        <h2>Welcome to Health life care</h2>
+        <p>Healthcare for good Today. Tomorrow. Always</p>
+        <a href="appointment.html" class="btn">Find a Doctor Now</a>
+    </div>
+</section>
 
+
+### 🎨 CSS (index.css)
+css
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #43685c;
+  color: #70b7a4;
+  padding: 10px 0;
+  background-image: url('back13.jpg');
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
 
 ## 🚀 How to Use
 
