@@ -12,10 +12,11 @@ body {
     align-items: center;
     height: 100vh;
     text-align: center;
+    background-image: url(thankbak_resized.png);
 }
 
 .thank-you-container {
-    background-color: #fff;
+    background-color: white;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
