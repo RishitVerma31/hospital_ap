@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image" href="Untitled design-3.jpg">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image" href="Untitled design-3.jpg" />
     <title>Doctor Appointment Page</title>
     <style>
+        /* Reset and base styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -18,19 +19,102 @@
             color: white;
             text-align: center;
             padding: 1rem;
+            margin-top: 60px; /* space for navbar */
         }
+
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            overflow: hidden;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            height: 60px;
+        }
+        .navbar .logo {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            line-height: 60px;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .navbar li {
+            display: inline;
+        }
+        .navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 18px 16px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .navbar li a:hover {
+            background-color: #575757;
+            border-radius: 4px;
+        }
+
+        /* Mobile menu button */
+        .navbar .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Responsive for smaller screens */
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-in-out;
+            }
+            .navbar ul.active {
+                max-height: 300px; /* enough to show all links */
+            }
+            .navbar li {
+                text-align: center;
+                margin: 0;
+            }
+            .navbar .menu-toggle {
+                display: block;
+            }
+        }
+
+        /* Filters */
         .filters {
             display: flex;
             justify-content: center;
             margin: 20px;
             gap: 10px;
+            flex-wrap: wrap;
         }
         .filters input, .filters select {
             padding: 10px;
             border-radius: 5px;
             border: 1px solid #ddd;
             width: 250px;
+            max-width: 100%;
         }
+
+        /* Doctor list */
         .doctor-list {
             display: flex;
             flex-wrap: wrap;
@@ -45,7 +129,7 @@
             margin: 15px;
             padding: 20px;
             text-align: center;
-            border: 2px solid #4CAF50; /* Green border */
+            border: 2px solid #4CAF50;
             transition: transform 0.3s ease;
         }
         .doctor-card:hover {
@@ -85,50 +169,74 @@
         .book-appointment:hover {
             background-color: #45a049;
         }
-        .a{
-            background-color: aqua;
+        a.back-home-btn {
+            display: inline-block;
+            margin: 20px auto 40px;
+            padding: 10px 25px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        a.back-home-btn:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Doctor Appointment Page</h1>
-    <p>Select a doctor to book an appointment</p>
-</header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="logo">DocApp</a>
+        <span class="menu-toggle" id="menu-toggle">&#9776;</span>
+        <ul id="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Doctors</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
-<!-- Filter and Search Bar -->
-<div class="filters">
-    <input type="text" id="searchInput" placeholder="Search by doctor name..." onkeyup="filterDoctors()">
-    <select id="departmentFilter" onchange="filterDoctors()">
-        <option value="">Filter by Department</option>
-        <option value="Cardiologist">Cardiologist</option>
-        <option value="Neurosurgeon">Neurosurgeon</option>
-        <option value="Dermatologist">Dermatologist</option>
-        <option value="Orthopedic">Orthopedic</option>
-        <option value="Gynecologist">Gynecologist</option>
-        <option value="Dentist">Dentist</option>
-        <option value="ENT">ENT</option>
-        <option value="Pediatrician">Pediatrician</option>
-        <option value="Nephrologist">Nephrologist</option>
-        <option value="Pulmonology">Pulmonology</option>
-    </select>
-</div>
+    <header>
+        <h1>Doctor Appointment Page</h1>
+        <p>Select a doctor to book an appointment</p>
+    </header>
 
-<div class="doctor-list">
-    <!-- Doctor 1 -->
-    <div class="doctor-card" data-department="Cardiologist">
-        <img src="cardio naresh.jpeg" alt="Doctor Image">
-        <h3>Dr. Naresh Trehan</h3>
-        <p>Cardiologist</p>
-        <div class="details">
-            <p><strong>Experience:</strong> 35 years</p>
-            <p><strong>Fees:</strong> ₹2000 per consultation</p>
-        </div>
-        <a href="reserve.html"><button class="book-appointment">Book Appointment</button></a>
+    <!-- Filter and Search Bar -->
+    <div class="filters">
+        <input type="text" id="searchInput" placeholder="Search by doctor name..." onkeyup="filterDoctors()" />
+        <select id="departmentFilter" onchange="filterDoctors()">
+            <option value="">Filter by Department</option>
+            <option value="Cardiologist">Cardiologist</option>
+            <option value="Neurosurgeon">Neurosurgeon</option>
+            <option value="Dermatologist">Dermatologist</option>
+            <option value="Orthopedic">Orthopedic</option>
+            <option value="Gynecologist">Gynecologist</option>
+            <option value="Dentist">Dentist</option>
+            <option value="ENT">ENT</option>
+            <option value="Pediatrician">Pediatrician</option>
+            <option value="Nephrologist">Nephrologist</option>
+            <option value="Pulmonology">Pulmonology</option>
+        </select>
     </div>
 
-    <!-- Doctor 2 -->
+    <div class="doctor-list">
+        <!-- Doctor cards here (same as your provided list) -->
+        <!-- Example for one doctor card -->
+        <div class="doctor-card" data-department="Cardiologist">
+            <img src="cardio naresh.jpeg" alt="Doctor Image" />
+            <h3>Dr. Naresh Trehan</h3>
+            <p>Cardiologist</p>
+            <div class="details">
+                <p><strong>Experience:</strong> 35 years</p>
+                <p><strong>Fees:</strong> ₹2000 per consultation</p>
+            </div>
+            <a href="reserve.html"><button class="book-appointment">Book Appointment</button></a>
+        </div>
+
+     <!-- Doctor 2 -->
     <div class="doctor-card" data-department="Neurosurgeon">
         <img src="neuro ajay.jpeg" alt="Doctor Image">
         <h3>Dr. Ajay Pandit</h3>
@@ -383,4 +491,3 @@
 </script>
 
 </body>
-</html>
