@@ -13,13 +13,19 @@
       <h1>Appointment Confirmed!</h1>
       <p>Thank you for booking your appointment.</p>
       <p>Take Care!</p>
-      <button>Print Confirmation</button>
+      <button id="print-btn">Print Confirmation</button>
       <br><br>
       <a href="index.html">back to home</a>
     </div>
   </div>
   <footer>
     <p>&copy; 2025 Health Life Care. All Rights Reserved.</p>
-</footer>
+  </footer>
+
+  <script>
+    document.getElementById("print-btn").addEventListener("click", function () {
+      window.print();
+    });
+  </script>
 </body>
 </html>
