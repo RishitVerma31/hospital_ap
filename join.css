@@ -1,0 +1,126 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #43685c;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #43685c;
+    padding: 1rem 0;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-list li a {
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-list li a:hover {
+    color: #70b7a4;
+  }
+  
+  .appointment-btn {
+    background-color: #70b7a4;
+    color: #ffffff;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .appointment-btn:hover {
+    background-color: #5da896;
+  }
+  
+  /* Join Team Section */
+  .join-team-section {
+    background-color: #70b7a4;
+    color: #ffffff;
+    padding: 3rem 1rem;
+    text-align: center;
+    border-top: 5px solid #43685c;
+    border-bottom: 5px solid #43685c;
+  }
+  
+  .join-team-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .join-team-section p {
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .team-member {
+    background-color: #43685c;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 200px;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .team-member h3 {
+    margin: 0.5rem 0 0.2rem;
+  }
+  
+  .team-member p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #43685c;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+  
