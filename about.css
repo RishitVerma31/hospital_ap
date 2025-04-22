@@ -1,0 +1,91 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #2d3e50;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #f1c40f;
+}
+
+section#about {
+    background-color: white;
+    padding: 40px 0;
+}
+
+section#about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2d3e50;
+}
+
+section#about p, section#about ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+section#about h3 {
+    font-size: 2rem;
+    color: #2d3e50;
+    margin-top: 30px;
+}
+
+section#about ul {
+    padding-left: 20px;
+}
+
+section#about ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #2d3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
