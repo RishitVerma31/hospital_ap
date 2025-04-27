@@ -15,11 +15,11 @@
             color: #333;
         }
         header {
-            background-color: #4CAF50;
+            background-color: #43685c;
             color: white;
             text-align: center;
             padding: 1rem;
-            margin-top: 60px; /* space for navbar */
+            margin-top: 20px; /* space for navbar */
         }
 
         /* Navbar Styles */
@@ -27,7 +27,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: #333;
+            background-color: #43685c;
             overflow: hidden;
             z-index: 1000;
             display: flex;
@@ -46,7 +46,7 @@
         .navbar ul {
             list-style-type: none;
             margin: 0;
-            padding: 0;
+            padding: 10px;
             display: flex;
         }
         .navbar li {
@@ -61,7 +61,7 @@
             font-weight: 500;
         }
         .navbar li a:hover {
-            background-color: #575757;
+            background-color: #70b7a4;
             border-radius: 4px;
         }
 
@@ -81,7 +81,7 @@
                 top: 60px;
                 left: 0;
                 width: 100%;
-                background-color: #333;
+                background-color: #43685c;
                 max-height: 0;
                 overflow: hidden;
                 transition: max-height 0.3s ease-in-out;
@@ -129,7 +129,7 @@
             margin: 15px;
             padding: 20px;
             text-align: center;
-            border: 2px solid #4CAF50;
+            border: 2px solid #43685c;
             transition: transform 0.3s ease;
         }
         .doctor-card:hover {
@@ -159,7 +159,7 @@
         .book-appointment {
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: #4CAF50;
+            background-color: #43685c;
             color: white;
             border: none;
             cursor: pointer;
@@ -167,13 +167,13 @@
             transition: background-color 0.3s ease;
         }
         .book-appointment:hover {
-            background-color: #45a049;
+            background-color: #70b7a4;
         }
         a.back-home-btn {
             display: inline-block;
             margin: 20px auto 40px;
             padding: 10px 25px;
-            background-color: #4CAF50;
+            background-color: #70b7a4;
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -181,7 +181,7 @@
             transition: background-color 0.3s ease;
         }
         a.back-home-btn:hover {
-            background-color: #45a049;
+            background-color: #70b7a4;
         }
     </style>
 </head>
@@ -189,7 +189,7 @@
 
     <!-- Navbar -->
     <nav class="navbar">
-        <a href="#" class="logo">DocApp</a>
+        <a href="#" class="logo">Healthcare</a>
         <span class="menu-toggle" id="menu-toggle">&#9776;</span>
         <ul id="navbar-menu">
             <li><a href="index.html">Home</a></li>
@@ -303,7 +303,7 @@
         <p>Dermatologist</p>
         <div class="details">
             <p><strong>Experience:</strong> 28 years</p>
-            <p><strong>Fees:</strong> ₹1800 per consultation</p>
+            <p><strong>Fees:</strong> ₹2000 per consultation</p>
         </div>
         <a href="reserve.html"><button class="book-appointment">Book Appointment</button></a>
     </div>
@@ -465,7 +465,6 @@
     </div>
 
 </div>
-<a style="color: green;" href="index.html"><button type="button">Back To Home</button></a>
 
 <script>
     function filterDoctors() {
