@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Submitted</title>
+  <link rel="icon" type="image" href="logo1.jpg">
+  <link rel="stylesheet" href="bookconfirm.css">
+  <link rel="icon" type="image" href="Untitled design-3.jpg">
+</head>
+<body>
+  <div class="container">
+    <div class="confirmation-box">
+      <h1>Interview Confirmed!</h1>
+      <p>Thank you for booking your interview.</p>
+      <p>Best of luck!</p>
+      <button id="print-btn">Print Confirmation</button>
+      <br><br>
+      <a href="index.html"><button type="button">Back To Home</button></a>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 Health Life Care. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("print-btn").addEventListener("click", function () {
+      window.print();
+    });
+  </script>
+</body>
+</html>
