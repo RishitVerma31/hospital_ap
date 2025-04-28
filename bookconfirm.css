@@ -1,62 +1,75 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    background: url('back1.jpg');
-  }
-  
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .confirmation-box {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  h1 {
-    color: brown;
-    margin-bottom: 20px;
-  }
-  
-  p {
-    margin-bottom: 10px;
-    font-size: 18px;
-  }
-  
-  ul {
-    list-style: none;
-    margin-bottom: 20px;
-  }
-  
-  ul li {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: rgb(231, 167, 83);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #B47250;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  background: url('back1.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.confirmation-box {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(67, 104, 92, 0.2);
+  text-align: center;
+  max-width: 500px;
+}
+
+h1 {
+  color: #43685c;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #43685c;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+ul li {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #43685c;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #70b7a4;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #5da896;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: #43685c;
+  font-size: 14px;
+}
