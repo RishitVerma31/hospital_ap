@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Generate Bill</title>
+  <link rel="stylesheet" href="bill.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">LabCare</a>
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="appointment.html">Doctors</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h2>🧾 Generate Your Lab And Room Bill</h2>
+    <form id="bill-form">
+      <div class="form-section">
+        <label for="disease-type">Select Disease Type</label>
+        <select id="disease-type" required>
+          <option value="" disabled selected>Select Disease</option>
+          <option value="Flu" data-base-price="500">Flu</option>
+          <option value="Pneumonia" data-base-price="1500">Pneumonia</option>
+          <option value="COVID-19" data-base-price="3000">COVID-19</option>
+          <option value="Malaria" data-base-price="1000">Malaria</option>
+          <option value="Tuberculosis" data-base-price="2500">Tuberculosis</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label for="stay-days">Number of Days Stayed</label>
+        <input type="number" id="stay-days" required min="1" placeholder="Enter number of days">
+      </div>
+
+      <button type="submit" class="submit-btn">Generate Bill</button>
+    </form>
+
+    <div id="bill-output" class="bill-display hidden"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 LabCare Diagnostics. All rights reserved.</p>
+  </footer>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+  </script>
+
+  <!-- Bill Generation Script -->
+  <script src="bill.js"></script>
+</body>
+</html>
