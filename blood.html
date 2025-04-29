@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blood Donation - Healthcare Management</title>
+  <link rel="icon" type="image" href="Untitled design-3.jpg">
+  <link rel="stylesheet" href="blood.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Healthcare Management</div>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="appointment.html">Find a Doctor</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Blood Donation Registration</h1>
+    <form id="donationForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required min="18" max="65">
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="10-digit number">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="bloodType">Blood Type:</label>
+      <select id="bloodType" name="bloodType" required>
+        <option value="">--Select--</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+      </select>
+
+      <label for="disease">Any Previous Disease?</label>
+      <select id="disease" name="disease" required>
+        <option value="">--Select--</option>
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+      </select>
+
+      <div id="diseaseDetailsContainer" style="display: none;">
+        <label for="diseaseDetails">Please specify:</label>
+        <textarea id="diseaseDetails" name="diseaseDetails" rows="3"></textarea>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="formMessage"></div>
+  </div>
+
+  <footer>
+    &copy; 2025 Healthcare Management. All rights reserved.
+  </footer>
+
+  <script src="blood.js"></script>
+</body>
+</html>
