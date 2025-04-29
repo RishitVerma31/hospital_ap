@@ -1,0 +1,180 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4fdfc;
+  color: #43685c;
+  line-height: 1.6;
+}
+
+/* Navbar Styles */
+nav {
+  background-color: #43685c;
+  padding: 1rem;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f4fdfc;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease, font-size 0.3s ease;
+  border-radius: 8px;
+  padding: 0.25rem;
+}
+
+.nav-menu a:hover {
+  color: #70b7a4;
+  font-size: 20px;
+}
+
+/* Header Section */
+.header {
+  background-color: #70b7a4;
+  padding: 3rem 0;
+  text-align: center;
+  color: white;
+}
+
+.header h1 {
+  font-size: 2rem;
+}
+
+.header p {
+  font-size: 1.1rem;
+}
+
+/* Container for Forms and Content */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Form Section Styles */
+.form-section {
+  margin: 1.5rem 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #43685c;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #70b7a4;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #5da896;
+}
+
+/* Bill Display */
+.bill-display {
+  margin-top: 2rem;
+  background-color: #e7f5f2;
+  border-left: 4px solid #5da896;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 1.2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Footer Styles */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #43685c;
+  color: white;
+  margin-top: 4rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #43685c;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .nav-menu li {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .nav-menu a {
+    padding: 0.5rem 0;
+    font-size: 18px;
+  }
+
+  .header {
+    padding: 2rem 0;
+  }
+}
