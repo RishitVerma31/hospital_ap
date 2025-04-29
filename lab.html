@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab Test Booking</title>
+  <link rel="stylesheet" href="lab.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">Healthcare</a>
+      <span class="menu-toggle" id="menu-toggle">&#9776;</span>
+      <ul class="nav-links" id="navbar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <h1>🧪 Lab Test Booking</h1>
+      <p>Book your medical tests easily and track report status.</p>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container">
+    <section class="booking-section">
+      <h2>Book a Test</h2>
+
+      <form id="booking-form">
+        <div class="form-group">
+          <label for="test-select">Select Test</label>
+          <select id="test-select" required>
+            <option value="" disabled selected>Select a test</option>
+            <option value="Blood Test">Blood Test</option>
+            <option value="X-ray">X-ray</option>
+            <option value="MRI">MRI</option>
+            <option value="Urine Analysis">Urine Analysis</option>
+            <option value="ECG">ECG</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="appointment-date">Select Appointment Date</label>
+          <input type="date" id="appointment-date" required>
+        </div>
+
+        <button type="submit" class="book-btn">Book Now</button>
+      </form>
+
+      <div id="status-message" class="status-message hidden"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 LabCare Diagnostics. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="lab.js"></script>
+</body>
+</html>
